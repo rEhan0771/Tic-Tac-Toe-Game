@@ -1,7 +1,4 @@
 import React from "react";
-import AttemptBox from "../shareComponent/AttemptBox";
-import ImageCircle from "../shareComponent/ImageCircle";
-//import "./card.css";
 
 const ScoreCard = () => {
   return (
@@ -22,13 +19,13 @@ const ScoreCard = () => {
               </div>
 
               <div class="d-flex gap-2 w-100 justify-content-between">
-                <div style="width: 50%;">
+                <div style={{width: "50%"}}>
                   <h6 class="mb-0">Ananth Rathi</h6>
                 </div>
-                <button type="button" class="btn btn-success" style="width: 25%;">
+                <button type="button" class="btn btn-success" style={{width: "25%"}}>
                   Won <span class=" badge rounded-pill bg-danger">2</span>
                 </button>
-                <button type="button" class="btn btn-warning" style="width: 25%;">
+                <button type="button" class="btn btn-warning" style={{width: "25%"}}>
                   Lost <span class=" badge rounded-pill bg-danger">3</span>
                 </button>
               </div>
@@ -40,13 +37,13 @@ const ScoreCard = () => {
                 <div class="avatar-title">RA</div>
               </div>
               <div class="d-flex gap-2 w-100 justify-content-between">
-                <div style="width: 50%;">
+                <div style={{width: "50%"}}>
                   <h6 class="mb-0">Avantika Rathod</h6>
                 </div>
-                <button type="button" class="btn btn-success" style="width: 25%;">
+                <button type="button" class="btn btn-success" style={{width: "25%"}}>
                   Won <span class=" badge rounded-pill bg-danger">3</span>
                 </button>
-                <button type="button" class="btn btn-warning" style="width: 25%;">
+                <button type="button" class="btn btn-warning" style={{width: "25%"}}>
                   Lost <span class=" badge rounded-pill bg-danger">2</span>
                 </button>
               </div>

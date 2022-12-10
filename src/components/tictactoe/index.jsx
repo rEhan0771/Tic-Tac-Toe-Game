@@ -1,18 +1,66 @@
 import React from "react";
-import ImageCircle from "../shareComponent/ImageCircle";
 import Game from "./Game";
 import "./style.css";
 
 const GameCard = () => {
   return (
-    <div className="game-container">
-      <Game />
-      <div>
-      <p style={{fontSize:14, marginTop:20}}>Time Watch: 00:12:43</p>
-      <div style={{display:'flex'}}>
-        <ImageCircle />
-        <p className="text-player">Anand Rathi - Your turn</p>
-      </div>
+    <div class="row">
+      <div class="col-12 col-lg-12 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <div id="timer">
+              <h5 class="card-title mb-3">
+                <div
+                  class="p-3 bg-info bg-opacity-10 border border-info border-start-1 rounded text-danger">
+                  Time Watch: 00:12:43
+                </div>
+              </h5>
+            </div>
+            <div class="row">
+
+              <div class="col-md-4">
+                <Game/>
+
+              </div>
+              <div class="col-md-8">
+
+                <div class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+
+                <div class="list-group w-auto">
+
+                  <div class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true">
+
+                    <div class="rounded-circle avatar">
+                      <div class="avatar-title">AR</div>
+                    </div>
+
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div style={{width: "80%"}}>
+                        <h6 class="mb-0">Ananth Rathi</h6>
+                      </div>
+                      <small class="text-muted">Your turn...</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true">
+                    <div class="rounded-circle avatar">
+                      <div class="avatar-title">RA</div>
+                    </div>
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div style={{width: "80%"}}>
+                        <h6 class="mb-0">Avantika Rathod</h6>
+                      </div>
+                      <small class="text-muted">Played</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Input from "../Input";
-import "./addplayer.css";
 
 const AddPlayer = () => {
   const [players, setPlayers] = useState({
