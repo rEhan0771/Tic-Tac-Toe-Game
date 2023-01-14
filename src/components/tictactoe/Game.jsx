@@ -13,6 +13,9 @@ function getStatus(squares, xIsNext) {
   }
 }
 
+// function playerStatus(xIsNext) {
+//   return `Next player: ${xIsNext ? "X" : "0"}`;
+// }
 function gameReducer(state, action) {
   const { squares, xIsNext } = state;
   switch (action.type) {
@@ -35,7 +38,7 @@ function gameReducer(state, action) {
   }
 }
 
-function Board() {
+function Board({onBoardClick}) {
   const [state, dispatch] = React.useReducer(gameReducer, {
     squares: Array(9).fill(null),
     xIsNext: true
@@ -44,7 +47,10 @@ function Board() {
 
   function renderSquare(index) {
     return (
-      <button className="square" onClick={() => selectSquare(index)}>
+      <button className="square" onClick={() => {
+        selectSquare(index)
+        onBoardClick();
+        }}>
         {squares[index]}
       </button>
     );
@@ -78,10 +84,10 @@ function Board() {
   );
 }
 
-function Game() {
+function Game({onBoardClick}) {
   return (
     <div className="game">
-      <Board />
+      <Board onBoardClick={onBoardClick}/>
     </div>
   );
 }

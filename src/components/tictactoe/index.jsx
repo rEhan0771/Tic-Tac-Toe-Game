@@ -1,8 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import Game from "./Game";
 import "./style.css";
 
 const GameCard = ({players}) => {
+  const [turn, setTurn] = useState(true)
   return (
     <div class="row">
       <div class="col-12 col-lg-12 mt-3">
@@ -19,7 +21,7 @@ const GameCard = ({players}) => {
             <div class="row">
 
               <div class="col-md-4">
-                <Game/>
+                <Game onBoardClick={()=>setTurn(!turn)}/>
 
               </div>
               <div class="col-md-8">
@@ -40,7 +42,7 @@ const GameCard = ({players}) => {
                       <div style={{width: "80%"}}>
                         <h6 class="mb-0">{players?.fPlayer1 ? (players?.fPlayer1 + " " + players?.lPlayer1) : ''}</h6>
                       </div>
-                      <small class="text-muted">Your turn...</small>
+                      <small class="text-muted">{turn ? "Your turn..." : "Played"}</small>
                     </div>
                   </div>
 
@@ -53,7 +55,7 @@ const GameCard = ({players}) => {
                       <div style={{width: "80%"}}>
                         <h6 class="mb-0">{players?.fPlayer2 ? (players?.fPlayer2 + " " + players?.lPlayer2) : ''}</h6>
                       </div>
-                      <small class="text-muted">Played</small>
+                      <small class="text-muted">{!turn ? "Your turn..." : "Played"}</small>
                     </div>
                   </div>
                 </div>
