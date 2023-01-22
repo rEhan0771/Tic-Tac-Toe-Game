@@ -49,7 +49,9 @@ function Board({onBoardClick}) {
     return (
       <button className="square" onClick={() => {
         selectSquare(index)
+        if(!squares[index]) {
         onBoardClick();
+        }
         }}>
         {squares[index]}
       </button>
